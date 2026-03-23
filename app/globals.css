@@ -1,0 +1,28 @@
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-sans: "Avenir Next", "Aptos", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-serif: "Garamond", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
