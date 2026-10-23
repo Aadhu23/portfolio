@@ -222,9 +222,6 @@ export default function Home() {
         <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-mist">Contributions</p>
-            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-              Open source work.
-            </h2>
           </div>
         </div>
 
@@ -259,9 +256,6 @@ export default function Home() {
         <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-mist">Projects</p>
-            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-              Selected work.
-            </h2>
           </div>
           <Link
             href="/projects"
@@ -323,9 +317,6 @@ export default function Home() {
         <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-mist">Skills</p>
-            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-              Tools I work with.
-            </h2>
           </div>
           <Link
             href="/skills"
@@ -353,9 +344,6 @@ export default function Home() {
       <section className="py-6 md:py-8">
         <div className="mb-5">
           <p className="text-xs uppercase tracking-[0.28em] text-mist">Education</p>
-          <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-            Academic background.
-          </h2>
         </div>
 
         <article className="rounded-shell border border-white/70 bg-white/75 p-8 shadow-soft backdrop-blur-xl">
@@ -371,9 +359,6 @@ export default function Home() {
       <section className="grid gap-6 py-6 md:grid-cols-[0.9fr_1.1fr] md:py-8">
         <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.28em] text-mist">Contact</p>
-          <h2 className="font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-            Let&apos;s connect.
-          </h2>
           <p className="max-w-xl leading-8 text-mist">
             If you would like to collaborate, discuss an idea, or talk about a
             project, feel free to reach out.
