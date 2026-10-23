@@ -208,7 +208,7 @@ export default function Home() {
 
           <div className="relative rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
             <div
-              className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
+              className="relative h-[320px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
               style={{ backgroundImage: "url('/profile.jpg')" }}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.28),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(22,16,12,0.18)_72%,rgba(22,16,12,0.32))]" />
