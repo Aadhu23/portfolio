@@ -15,6 +15,14 @@ export default function MenuToggle() {
   const [open, setOpen] = useState(true);
   const rootRef = useRef(null);
   const pathname = usePathname();
+  const prevPathname = useRef(null);
+
+  useEffect(() => {
+    if (pathname !== prevPathname.current) {
+      prevPathname.current = pathname;
+      setOpen(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     function handlePointerDown(event) {
@@ -37,10 +45,6 @@ export default function MenuToggle() {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   return (
     <div ref={rootRef} className="relative flex items-center">

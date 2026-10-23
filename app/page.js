@@ -122,7 +122,7 @@ const contributions = [
 export default function Home() {
   return (
     <>
-      <section className="mb-6 overflow-hidden rounded-shell border border-white/70 shadow-soft">
+      <section className="mb-6 overflow-hidden rounded-shell shadow-soft">
         <div
           className="relative h-[220px] overflow-hidden bg-cover bg-center md:h-[280px]"
           style={{ backgroundImage: "url('/banner.jpg')" }}
@@ -206,7 +206,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative rounded-[2.2rem] border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
+          <div className="relative rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
             <div
               className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
               style={{ backgroundImage: "url('/profile.jpg')" }}
