@@ -108,33 +108,6 @@ const contributions = [
     description:
       "Fixed conflicting LLVM memory attributes that could crash Clang, with regression tests."
   },
-  {
-    title: "videoio: fix build with FFmpeg 9 after AVCodec::pix_fms removal",
-    repo: "opencv/opencv",
-    prUrl: "https://github.com/opencv/opencv/pull/29533",
-    number: 29533,
-    status: "Closed",
-    description:
-      "Replaced direct AVCodec::pix_fms access with avcodec_get_supported_config() for FFmpeg 9 compatibility."
-  },
-  {
-    title: "videoio: fix build with FFmpeg 9 after AVCodec::pix_fms removal",
-    repo: "opencv/opencv",
-    prUrl: "https://github.com/opencv/opencv/pull/29532",
-    number: 29532,
-    status: "Closed",
-    description:
-      "Kept the older FFmpeg behaviour via version-based compatibility checks."
-  },
-  {
-    title: "Include geometry.hpp in opencv.hpp when HAVE_OPENCV_GEOMETRY is enabled",
-    repo: "opencv/opencv",
-    prUrl: "https://github.com/opencv/opencv/pull/29520",
-    number: 29520,
-    status: "Closed",
-    description:
-      "Added the missing conditional include for OpenCV's geometry module."
-  }
 ];
 
 export default function Home() {
