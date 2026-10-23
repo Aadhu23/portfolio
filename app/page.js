@@ -108,6 +108,15 @@ const contributions = [
     description:
       "Fixed conflicting LLVM memory attributes that could crash Clang, with regression tests."
   },
+  {
+    title: "videoio: fix build with FFmpeg 9 after AVCodec::pix_fms removal",
+    repo: "opencv/opencv",
+    prUrl: "https://github.com/opencv/opencv/pull/29533",
+    number: 29533,
+    status: "Closed",
+    description:
+      "Replaced direct AVCodec::pix_fms access with avcodec_get_supported_config() for FFmpeg 9 compatibility."
+  },
 ];
 
 export default function Home() {
@@ -198,7 +207,6 @@ export default function Home() {
           </div>
 
           <div className="relative rounded-[2.2rem] border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
-            <div className="pointer-events-none absolute inset-3 rounded-[1.7rem] border border-white/80" />
             <div
               className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
               style={{ backgroundImage: "url('/profile.jpg')" }}
@@ -294,7 +302,7 @@ export default function Home() {
                 <span>{contribution.repo}</span>
                 <span>{contribution.status}</span>
               </div>
-              <h3 className="mt-4 text-2xl font-semibold text-ink">{contribution.title}</h3>
+              <h3 className="mt-4 text-3xl font-semibold text-ink">{contribution.title}</h3>
               <p className="mt-4 leading-8 text-mist">{contribution.description}</p>
               <div className="mt-6">
                 <a

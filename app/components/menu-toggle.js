@@ -12,7 +12,7 @@ const links = [
 ];
 
 export default function MenuToggle() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const rootRef = useRef(null);
   const pathname = usePathname();
 
@@ -63,7 +63,10 @@ export default function MenuToggle() {
             : "invisible w-0 px-0 py-3 opacity-0"
         }`}
       >
-        <nav className="flex min-w-max items-center gap-6 whitespace-nowrap text-sm text-mist">
+        <nav
+          className="flex min-w-max items-center gap-6 whitespace-nowrap text-sm text-mist"
+          onClick={() => setOpen(false)}
+        >
           {links.map((link, index) => (
             <Link
               key={link.href}
