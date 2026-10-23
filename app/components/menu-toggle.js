@@ -15,7 +15,7 @@ export default function MenuToggle() {
   const [open, setOpen] = useState(true);
   const rootRef = useRef(null);
   const pathname = usePathname();
-  const prevPathname = useRef(null);
+  const prevPathname = useRef(pathname);
 
   useEffect(() => {
     if (pathname !== prevPathname.current) {

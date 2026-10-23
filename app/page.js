@@ -302,7 +302,7 @@ export default function Home() {
                 <span>{contribution.repo}</span>
                 <span>{contribution.status}</span>
               </div>
-              <h3 className="mt-4 text-3xl font-semibold text-ink">{contribution.title}</h3>
+              <h3 className="mt-4 text-2xl font-semibold text-ink">{contribution.title}</h3>
               <p className="mt-4 leading-8 text-mist">{contribution.description}</p>
               <div className="mt-6">
                 <a
