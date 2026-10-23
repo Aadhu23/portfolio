@@ -221,6 +221,43 @@ export default function Home() {
       <section className="py-6 md:py-8">
         <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-mist">Contributions</p>
+            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
+              Open source work.
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {contributions.map((contribution) => (
+            <article
+              key={contribution.number}
+              className="rounded-shell border border-white/70 bg-white/75 p-8 shadow-soft backdrop-blur-xl"
+            >
+              <div className="flex flex-wrap justify-between gap-3 text-xs uppercase tracking-[0.24em] text-mist">
+                <span>{contribution.repo}</span>
+                <span>{contribution.status}</span>
+              </div>
+              <h3 className="mt-4 text-[15px] font-semibold text-ink">{contribution.title}</h3>
+              <p className="mt-4 leading-8 text-mist">{contribution.description}</p>
+              <div className="mt-6">
+                <a
+                  href={contribution.prUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white/90 px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
+                >
+                  GitHub PR
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-6 md:py-8">
+        <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
             <p className="text-xs uppercase tracking-[0.28em] text-mist">Projects</p>
             <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
               Selected work.
@@ -275,43 +312,6 @@ export default function Home() {
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white/90 px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
                 >
                   GitHub Repo
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-6 md:py-8">
-        <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-mist">Contributions</p>
-            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
-              Open source work.
-            </h2>
-          </div>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {contributions.map((contribution) => (
-            <article
-              key={contribution.number}
-              className="rounded-shell border border-white/70 bg-white/75 p-8 shadow-soft backdrop-blur-xl"
-            >
-              <div className="flex flex-wrap justify-between gap-3 text-xs uppercase tracking-[0.24em] text-mist">
-                <span>{contribution.repo}</span>
-                <span>{contribution.status}</span>
-              </div>
-              <h3 className="mt-4 text-2xl font-semibold text-ink">{contribution.title}</h3>
-              <p className="mt-4 leading-8 text-mist">{contribution.description}</p>
-              <div className="mt-6">
-                <a
-                  href={contribution.prUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white/90 px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
-                >
-                  GitHub PR
                 </a>
               </div>
             </article>
