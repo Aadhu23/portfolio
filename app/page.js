@@ -206,7 +206,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
+          <div className="relative rounded-[2.2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
             <div
               className="relative w-[320px] h-[280px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
               style={{ backgroundImage: "url('/profile.jpg')" }}
