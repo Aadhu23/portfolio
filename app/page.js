@@ -48,7 +48,7 @@ const projects = [
     title: "SnapIN",
     status: "Working",
     progress: 62,
-    repo: "https://github.com/Aadhu23?tab=repositories",
+    repo: "https://github.com/Aadhu23/snapin",
     description:
       "A focus-first productivity platform that combines live detection, fast backend communication, and a cleaner product interface.",
     points: [
@@ -64,7 +64,7 @@ const projects = [
     title: "Study Guard",
     status: "Completed",
     progress: 100,
-    repo: "https://github.com/Aadhu23?tab=repositories",
+    repo: "https://github.com/Aadhu23/study-gaurd",
     description:
       "A distraction-detection system that monitors study sessions and responds when phone usage crosses a threshold."
   },
@@ -74,7 +74,7 @@ const projects = [
     title: "Book Storage System",
     status: "Completed",
     progress: 100,
-    repo: "https://github.com/Aadhu23?tab=repositories",
+    repo: "https://github.com/Aadhu23/Book-Storage-System",
     description:
       "A console-based book journal with storage, search, sorting, and file persistence."
   }
@@ -95,6 +95,45 @@ const skillGroups = [
     title: "Focus Areas",
     items:
       "Backend Development, Data Processing Systems, Computer Vision, Distributed Systems (Learning)"
+  }
+];
+
+const contributions = [
+  {
+    title: "[InferAttrs] Avoid conflicting argument memory attributes",
+    repo: "llvm/llvm-project",
+    prUrl: "https://github.com/llvm/llvm-project/pull/226207",
+    number: 226207,
+    status: "Open",
+    description:
+      "Fixed conflicting LLVM memory attributes that could crash Clang, with regression tests."
+  },
+  {
+    title: "videoio: fix build with FFmpeg 9 after AVCodec::pix_fms removal",
+    repo: "opencv/opencv",
+    prUrl: "https://github.com/opencv/opencv/pull/29533",
+    number: 29533,
+    status: "Closed",
+    description:
+      "Replaced direct AVCodec::pix_fms access with avcodec_get_supported_config() for FFmpeg 9 compatibility."
+  },
+  {
+    title: "videoio: fix build with FFmpeg 9 after AVCodec::pix_fms removal",
+    repo: "opencv/opencv",
+    prUrl: "https://github.com/opencv/opencv/pull/29532",
+    number: 29532,
+    status: "Closed",
+    description:
+      "Kept the older FFmpeg behaviour via version-based compatibility checks."
+  },
+  {
+    title: "Include geometry.hpp in opencv.hpp when HAVE_OPENCV_GEOMETRY is enabled",
+    repo: "opencv/opencv",
+    prUrl: "https://github.com/opencv/opencv/pull/29520",
+    number: 29520,
+    status: "Closed",
+    description:
+      "Added the missing conditional include for OpenCV's geometry module."
   }
 ];
 
@@ -185,16 +224,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative rounded-[2.2rem] border border-black/7 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
+          <div className="relative rounded-[2.2rem] border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,242,236,0.7))] p-4 shadow-[0_18px_46px_rgba(35,25,15,0.08)]">
             <div className="pointer-events-none absolute inset-3 rounded-[1.7rem] border border-white/80" />
             <div
               className="relative min-h-[420px] overflow-hidden rounded-[1.7rem] bg-cover bg-[center_18%]"
               style={{ backgroundImage: "url('/profile.jpg')" }}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(255,255,255,0.28),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(22,16,12,0.18)_72%,rgba(22,16,12,0.32))]" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                
-              </div>
+              
             </div>
           </div>
         </div>
@@ -257,6 +294,43 @@ export default function Home() {
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white/90 px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
                 >
                   GitHub Repo
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-6 md:py-8">
+        <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-mist">Contributions</p>
+            <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.03em] text-ink md:text-6xl">
+              Open source work.
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {contributions.map((contribution) => (
+            <article
+              key={contribution.number}
+              className="rounded-shell border border-white/70 bg-white/75 p-8 shadow-soft backdrop-blur-xl"
+            >
+              <div className="flex flex-wrap justify-between gap-3 text-xs uppercase tracking-[0.24em] text-mist">
+                <span>{contribution.repo}</span>
+                <span>{contribution.status}</span>
+              </div>
+              <h3 className="mt-4 text-2xl font-semibold text-ink">{contribution.title}</h3>
+              <p className="mt-4 leading-8 text-mist">{contribution.description}</p>
+              <div className="mt-6">
+                <a
+                  href={contribution.prUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-black/10 bg-white/90 px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
+                >
+                  GitHub PR
                 </a>
               </div>
             </article>

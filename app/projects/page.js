@@ -7,7 +7,7 @@ const projects = [
     title: "SnapIN",
     status: "Working",
     progress: 62,
-    repo: "#",
+    repo: "https://github.com/Aadhu23/snapin",
     description:
       "A focus-first productivity platform that combines live detection, fast backend communication, and a cleaner product interface.",
     points: [
@@ -22,7 +22,7 @@ const projects = [
     title: "Study Guard",
     status: "Completed",
     progress: 100,
-    repo: "#",
+    repo: "https://github.com/Aadhu23/study-gaurd",
     description:
       "A distraction-detection system that monitors study sessions and responds when phone usage crosses a threshold."
   },
@@ -32,7 +32,7 @@ const projects = [
     title: "Book Storage System",
     status: "Completed",
     progress: 100,
-    repo: "#",
+    repo: "https://github.com/Aadhu23/Book-Storage-System",
     description:
       "A console-based book journal with storage, search, sorting, and file persistence."
   }
